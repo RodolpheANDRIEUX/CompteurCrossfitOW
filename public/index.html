@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compteur Crossfit OW</title>
-    <link rel="stylesheet" href="style/index.css">
+    <title>Compteurs par Salon</title>
 </head>
 <body>
-<div class="container">
-    <h1>Compteurs Crossfit OW</h1>
-
-    <div id="compteurs">
-        <!-- Les compteurs seront insérés ici par JavaScript -->
-    </div>
+<div id="salonSelection">
+    <h2>Choisissez un salon :</h2>
+    <ul>
+        <li><button onclick="JoinSalon(0)">Chien</button></li>
+        <li><button onclick="JoinSalon(1)">Chat</button></li>
+        <li><button onclick="JoinSalon(2)">Lion</button></li>
+        <li><button onclick="JoinSalon(3)">Éléphant</button></li>
+        <li><button onclick="JoinSalon(4)">Girafe</button></li>
+        <li><button onclick="JoinSalon(5)">Ours</button></li>
+        <li><button onclick="JoinSalon(6)">Pingouin</button></li>
+        <li><button onclick="JoinSalon(7)">Dauphin</button></li>
+        <li><button onclick="JoinSalon(8)">Papillon</button></li>
+        <li><button onclick="JoinSalon(9)">Kangourou</button></li>
+    </ul>
 </div>
 
+<div id="compteurs" style="display: none;">
+    <h2>Compteurs du Salon <span id="salonName"></span></h2>
+    <button onclick="resetCompteurs()">Réinitialiser les compteurs</button>
+
+    <br><br>
+    <div id="compteurValues">
+        <!-- Les valeurs des compteurs seront affichées ici -->
+    </div>
+    <button onclick="returnToSalonSelection()">Retour</button>
+</div>
+
+<script src="js/client.js" defer></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="js/index.js"></script>
 </body>
 </html>
