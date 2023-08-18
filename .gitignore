@@ -29,6 +29,7 @@ public/js/socket.io.js
 .idea/
 *.swp
 *.swo
+*.iml
 
 # OS
 .DS_Store
